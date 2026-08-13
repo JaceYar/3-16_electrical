@@ -1,552 +1,1105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3:16 Electrical Services | Montgomery County Electricians</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#EAE6E1;
-    --ink:#161611;
-    --green:#3F4E3B;
-    --green-dark:#2B372A;
-    --green-tint:#E4E9E0;
-    --tan:#E4CEB4;
-    --tan-soft:#F0E3D2;
-    --white:#FBFAF8;
-    --radius:14px;
-    --shadow: 0 18px 40px -20px rgba(22,22,17,0.35);
-    font-size:16px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--cream);
-    color:var(--ink);
-    font-family:'Nunito Sans', sans-serif;
-    line-height:1.6;
-  }
-  h1,h2,h3,h4,.eyebrow,.logo,.btn,nav a{
-    font-family:'Montserrat', sans-serif;
-  }
-  h1,h2,h3{
-    margin:0 0 .5em;
-    font-weight:700;
-    letter-spacing:-0.01em;
-    color:var(--ink);
-  }
-  h1{font-size:clamp(2.1rem, 4.4vw, 3.4rem); line-height:1.1;}
-  h2{font-size:clamp(1.6rem, 2.6vw, 2.2rem); line-height:1.18;}
-  h3{font-size:1.15rem;}
-  p{margin:0 0 1em; color:#3a3a34;}
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-  section{padding:88px 0;}
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:.5em;
-    font-size:.72rem;
-    font-weight:700;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--green);
-    margin-bottom:14px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:22px;height:2px;
-    background:var(--tan);
-    display:inline-block;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:.5em;
-    padding:15px 30px;
-    border-radius:999px;
-    font-weight:700;
-    font-size:.85rem;
-    letter-spacing:.03em;
-    text-transform:uppercase;
-    border:1.5px solid transparent;
-    cursor:pointer;
-    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
-  }
-  .btn:hover{transform:translateY(-2px);}
-  .btn:focus-visible{outline:3px solid var(--tan); outline-offset:3px;}
-  .btn-tan{background:var(--tan); color:var(--green-dark);}
-  .btn-tan:hover{box-shadow:0 14px 26px -12px rgba(228,206,180,0.9); background:var(--tan-soft);}
-  .btn-dark{background:var(--green); color:var(--white);}
-  .btn-dark:hover{box-shadow:var(--shadow); background:var(--green-dark);}
-  .btn-outline{background:transparent; color:var(--white); border-color:rgba(251,250,248,.5);}
-  .btn-outline:hover{background:rgba(251,250,248,.12); border-color:var(--white);}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3:16 Electrical Services | Montgomery County Electricians</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&family=Alex+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #eae6e1;
+        --ink: #161611;
+        --green: #3f4e3b;
+        --green-dark: #2b372a;
+        --green-tint: #e4e9e0;
+        --tan: #e4ceb4;
+        --tan-soft: #f0e3d2;
+        --white: #fbfaf8;
+        --radius: 14px;
+        --shadow: 0 18px 40px -20px rgba(22, 22, 17, 0.35);
+        font-size: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: "Nunito Sans", sans-serif;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .eyebrow,
+      .btn,
+      nav a {
+        font-family: "Montserrat", sans-serif;
+      }
+      .script {
+        font-family: "Alex Brush", cursive;
+        font-weight: 400;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 0.5em;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+      }
+      h1 {
+        font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+        line-height: 1.1;
+      }
+      h2 {
+        font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+        line-height: 1.18;
+      }
+      h3 {
+        font-size: 1.15rem;
+      }
+      p {
+        margin: 0 0 1em;
+        color: #3a3a34;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      section {
+        padding: 88px 0;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 14px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--tan);
+        display: inline-block;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 15px 30px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        border: 1.5px solid transparent;
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease,
+          color 0.18s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn:focus-visible {
+        outline: 3px solid var(--tan);
+        outline-offset: 3px;
+      }
+      .btn-tan {
+        background: var(--tan);
+        color: var(--green-dark);
+      }
+      .btn-tan:hover {
+        box-shadow: 0 14px 26px -12px rgba(228, 206, 180, 0.9);
+        background: var(--tan-soft);
+      }
+      .btn-dark {
+        background: var(--green);
+        color: var(--white);
+      }
+      .btn-dark:hover {
+        box-shadow: var(--shadow);
+        background: var(--green-dark);
+      }
+      .btn-outline {
+        background: transparent;
+        color: var(--white);
+        border-color: rgba(251, 250, 248, 0.5);
+      }
+      .btn-outline:hover {
+        background: rgba(251, 250, 248, 0.12);
+        border-color: var(--white);
+      }
 
-  /* ---------- header ---------- */
-  header{
-    position:sticky; top:0; z-index:40;
-    background:rgba(234,230,225,0.92);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid rgba(22,22,17,0.08);
-  }
-  .nav-row{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 0;
-  }
-  .logo{
-    display:flex; align-items:center; gap:10px;
-    font-weight:800; font-size:1.15rem; color:var(--ink);
-  }
-  .logo .mark{
-    width:38px; height:38px; border-radius:10px;
-    background:var(--green);
-    color:var(--tan);
-    display:flex; align-items:center; justify-content:center;
-    font-size:1rem; font-weight:800;
-    letter-spacing:-0.02em;
-  }
-  .logo small{
-    display:block; font-family:'Nunito Sans',sans-serif;
-    font-weight:600; font-size:.62rem; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--green);
-    margin-top:1px;
-  }
-  nav ul{
-    list-style:none; display:flex; gap:34px; margin:0; padding:0;
-  }
-  nav a{
-    font-size:.86rem; font-weight:600; letter-spacing:.02em;
-    color:var(--ink); position:relative; padding:4px 0;
-  }
-  nav a::after{
-    content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px;
-    background:var(--green); transform:scaleX(0); transform-origin:left;
-    transition:transform .2s ease;
-  }
-  nav a:hover::after{transform:scaleX(1);}
-  .nav-right{display:flex; align-items:center; gap:22px;}
-  .nav-phone{font-size:.86rem; font-weight:700; color:var(--green-dark); white-space:nowrap;}
-  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
-  .nav-toggle span{display:block; width:24px; height:2px; background:var(--ink); margin:5px 0; transition:.2s;}
+      /* ---------- header ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(234, 230, 225, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(22, 22, 17, 0.08);
+      }
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4px 0;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo img {
+        height: 150px;
+        width: auto;
+        display: block;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 34px;
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        font-size: 0.86rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: var(--ink);
+        position: relative;
+        padding: 4px 0;
+      }
+      nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background: var(--green);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s ease;
+      }
+      nav a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+      .nav-phone {
+        font-size: 0.86rem;
+        font-weight: 700;
+        color: var(--green-dark);
+        white-space: nowrap;
+      }
+      .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--ink);
+        margin: 5px 0;
+        transition: 0.2s;
+      }
 
-  /* ---------- hero ---------- */
-  .hero{
-    position:relative; overflow:hidden;
-    background:radial-gradient(120% 140% at 82% 8%, #52654C 0%, var(--green) 42%, var(--green-dark) 100%);
-    color:var(--white);
-    padding:120px 0 100px;
-  }
-  .hero::before{
-    content:"";
-    position:absolute; top:-8%; right:6%;
-    width:420px; height:420px; border-radius:50%;
-    background:radial-gradient(circle, rgba(228,206,180,.55) 0%, rgba(228,206,180,0) 68%);
-    filter:blur(2px);
-    pointer-events:none;
-  }
-  .hero-inner{position:relative; max-width:640px;}
-  .hero p.lead{color:rgba(251,250,248,.86); font-size:1.08rem; max-width:520px;}
-  .hero-actions{display:flex; gap:16px; flex-wrap:wrap; margin-top:30px;}
-  .hero-badges{
-    display:flex; flex-wrap:wrap; gap:28px;
-    margin-top:64px; padding-top:28px;
-    border-top:1px solid rgba(251,250,248,.18);
-  }
-  .hero-badges .b{font-size:.8rem; font-weight:600; color:rgba(251,250,248,.82); display:flex; align-items:center; gap:8px;}
-  .hero-badges .b svg{flex-shrink:0;}
+      /* ---------- hero ---------- */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: radial-gradient(
+          120% 140% at 82% 8%,
+          #52654c 0%,
+          var(--green) 42%,
+          var(--green-dark) 100%
+        );
+        color: var(--white);
+        padding: 120px 0 100px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -8%;
+        right: 6%;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(228, 206, 180, 0.55) 0%,
+          rgba(228, 206, 180, 0) 68%
+        );
+        filter: blur(2px);
+        pointer-events: none;
+      }
+      .hero-inner {
+        position: relative;
+        max-width: 640px;
+      }
+      .hero p.lead {
+        color: rgba(251, 250, 248, 0.86);
+        font-size: 1.08rem;
+        max-width: 520px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        margin-top: 64px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(251, 250, 248, 0.18);
+      }
+      .hero-badges .b {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(251, 250, 248, 0.82);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hero-badges .b svg {
+        flex-shrink: 0;
+      }
 
-  /* ---------- about ---------- */
-  .about{
-    display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
-  }
-  .about .stat-strip{
-    display:flex; gap:34px; margin-top:28px; flex-wrap:wrap;
-  }
-  .about .stat{border-left:2px solid var(--tan); padding-left:14px;}
-  .about .stat strong{display:block; font-family:'Montserrat',sans-serif; font-size:1.6rem; color:var(--green);}
-  .about .stat span{font-size:.78rem; color:#5a5a52; text-transform:uppercase; letter-spacing:.06em;}
-  .about-card{
-    background:var(--white); border-radius:var(--radius); padding:34px;
-    box-shadow:var(--shadow); border:1px solid rgba(22,22,17,.06);
-  }
-  .about-card ul{margin:0; padding:0; list-style:none;}
-  .about-card li{
-    display:flex; gap:12px; padding:12px 0; border-bottom:1px solid rgba(22,22,17,.08); font-weight:600; font-size:.95rem;
-  }
-  .about-card li:last-child{border-bottom:none;}
-  .about-card li::before{
-    content:"⚡"; color:var(--tan); background:var(--green); border-radius:50%;
-    width:24px; height:24px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:.7rem;
-  }
+      /* ---------- about ---------- */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      .about .stat-strip {
+        display: flex;
+        gap: 34px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+      .about .stat {
+        border-left: 2px solid var(--tan);
+        padding-left: 14px;
+      }
+      .about .stat strong {
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.6rem;
+        color: var(--green);
+      }
+      .about .stat span {
+        font-size: 0.78rem;
+        color: #5a5a52;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .about-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 34px;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(22, 22, 17, 0.06);
+      }
+      .about-card ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .about-card li {
+        display: flex;
+        gap: 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(22, 22, 17, 0.08);
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      .about-card li:last-child {
+        border-bottom: none;
+      }
+      .about-card li::before {
+        content: "⚡";
+        color: var(--tan);
+        background: var(--green);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+      }
 
-  /* ---------- services ---------- */
-  .services{background:var(--green-tint);}
-  .services-head{max-width:600px; margin:0 auto 48px; text-align:center;}
-  .grid-services{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
-  }
-  .service-card{
-    background:var(--white); border-radius:var(--radius); padding:28px 26px;
-    border:1px solid rgba(22,22,17,.07);
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .service-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
-  .service-card .ic{
-    width:44px; height:44px; border-radius:10px; background:var(--green); color:var(--tan);
-    display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-size:1.1rem;
-  }
-  .service-card p{font-size:.92rem; margin-bottom:0; color:#4a4a42;}
+      /* ---------- services ---------- */
+      .services {
+        background: var(--green-tint);
+      }
+      .services-head {
+        max-width: 600px;
+        margin: 0 auto 48px;
+        text-align: center;
+      }
+      .grid-services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .service-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 28px 26px;
+        border: 1px solid rgba(22, 22, 17, 0.07);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+      }
+      .service-card .ic {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--green);
+        color: var(--tan);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+        font-size: 1.1rem;
+      }
+      .service-card p {
+        font-size: 0.92rem;
+        margin-bottom: 0;
+        color: #4a4a42;
+      }
 
-  /* ---------- why us ---------- */
-  .why{
-    background:var(--green); color:var(--white); border-radius:24px;
-    padding:64px; display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center;
-  }
-  .why .eyebrow{color:var(--tan);}
-  .why .eyebrow::before{background:var(--tan);}
-  .why h2{color:var(--white);}
-  .why p{color:rgba(251,250,248,.85);}
-  .why-panel{
-    background:rgba(251,250,248,.06); border:1px solid rgba(251,250,248,.16);
-    border-radius:16px; padding:26px;
-  }
-  .why-panel .row{display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid rgba(251,250,248,.14); font-size:.9rem;}
-  .why-panel .row:last-child{border-bottom:none;}
-  .why-panel .row span:first-child{color:rgba(251,250,248,.65);}
-  .why-panel .row span:last-child{font-weight:700; color:var(--tan);}
+      /* ---------- why us ---------- */
+      .why {
+        background: var(--green);
+        color: var(--white);
+        border-radius: 24px;
+        padding: 64px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .why .eyebrow {
+        color: var(--tan);
+      }
+      .why .eyebrow::before {
+        background: var(--tan);
+      }
+      .why h2 {
+        color: var(--white);
+      }
+      .why p {
+        color: rgba(251, 250, 248, 0.85);
+      }
+      .why-panel {
+        background: rgba(251, 250, 248, 0.06);
+        border: 1px solid rgba(251, 250, 248, 0.16);
+        border-radius: 16px;
+        padding: 26px;
+      }
+      .why-panel .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(251, 250, 248, 0.14);
+        font-size: 0.9rem;
+      }
+      .why-panel .row:last-child {
+        border-bottom: none;
+      }
+      .why-panel .row span:first-child {
+        color: rgba(251, 250, 248, 0.65);
+      }
+      .why-panel .row span:last-child {
+        font-weight: 700;
+        color: var(--tan);
+      }
 
-  /* ---------- schedule CTA ---------- */
-  .schedule{
-    text-align:center; padding:96px 0;
-  }
-  .schedule h2{max-width:640px; margin-left:auto; margin-right:auto;}
-  .schedule p{max-width:520px; margin-left:auto; margin-right:auto;}
+      /* ---------- schedule CTA ---------- */
+      .schedule {
+        text-align: center;
+        padding: 96px 0;
+      }
+      .schedule h2 {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .schedule p {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-  /* ---------- contact / quote form ---------- */
-  .contact{
-    background:var(--green-dark); color:var(--white); border-radius:24px;
-    padding:64px; display:grid; grid-template-columns:.85fr 1.15fr; gap:56px;
-  }
-  .contact .eyebrow{color:var(--tan);}
-  .contact .eyebrow::before{background:var(--tan);}
-  .contact h2{color:var(--white);}
-  .contact p{color:rgba(251,250,248,.78);}
-  .contact-info{margin-top:32px; display:flex; flex-direction:column; gap:16px;}
-  .contact-info a{
-    display:flex; align-items:center; gap:12px; font-weight:700; font-size:1rem; color:var(--white);
-  }
-  .contact-info .ic2{
-    width:38px; height:38px; border-radius:50%; background:rgba(228,206,180,.16);
-    color:var(--tan); display:flex; align-items:center; justify-content:center; flex-shrink:0;
-  }
-  form{background:var(--white); border-radius:16px; padding:34px; color:var(--ink);}
-  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  .field{margin-bottom:18px;}
-  .field label{
-    display:block; font-size:.8rem; font-weight:700; margin-bottom:6px; color:var(--green-dark);
-  }
-  .field label .req{color:#a05a2c; font-weight:600; font-size:.72rem;}
-  .field input, .field textarea, .field select{
-    width:100%; padding:12px 14px; border:1.5px solid #d9d3c9; border-radius:10px;
-    font-family:'Nunito Sans',sans-serif; font-size:.94rem; background:var(--cream);
-    transition:border-color .15s ease, background .15s ease;
-  }
-  .field input:focus, .field textarea:focus, .field select:focus{
-    outline:none; border-color:var(--green); background:var(--white);
-  }
-  .field textarea{min-height:110px; resize:vertical;}
-  .form-note{font-size:.72rem; color:#8a8577; margin-top:-8px; margin-bottom:14px;}
-  .success-msg{
-    display:none; background:var(--green-tint); border:1px solid var(--green);
-    border-radius:10px; padding:16px 18px; font-weight:700; color:var(--green-dark); margin-bottom:18px;
-  }
-  .success-msg.show{display:block;}
+      /* ---------- contact / quote form ---------- */
+      .contact {
+        background: var(--green-dark);
+        color: var(--white);
+        border-radius: 24px;
+        padding: 64px;
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 56px;
+      }
+      .contact .eyebrow {
+        color: var(--tan);
+      }
+      .contact .eyebrow::before {
+        background: var(--tan);
+      }
+      .contact h2 {
+        color: var(--white);
+      }
+      .contact p {
+        color: rgba(251, 250, 248, 0.78);
+      }
+      .contact-info {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .contact-info a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--white);
+      }
+      .contact-info .ic2 {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(228, 206, 180, 0.16);
+        color: var(--tan);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      form {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 34px;
+        color: var(--ink);
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .field {
+        margin-bottom: 18px;
+      }
+      .field label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        color: var(--green-dark);
+      }
+      .field label .req {
+        color: #a05a2c;
+        font-weight: 600;
+        font-size: 0.72rem;
+      }
+      .field input,
+      .field textarea,
+      .field select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1.5px solid #d9d3c9;
+        border-radius: 10px;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 0.94rem;
+        background: var(--cream);
+        transition:
+          border-color 0.15s ease,
+          background 0.15s ease;
+      }
+      .field input:focus,
+      .field textarea:focus,
+      .field select:focus {
+        outline: none;
+        border-color: var(--green);
+        background: var(--white);
+      }
+      .field textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .form-note {
+        font-size: 0.72rem;
+        color: #8a8577;
+        margin-top: -8px;
+        margin-bottom: 14px;
+      }
+      .success-msg {
+        display: none;
+        background: var(--green-tint);
+        border: 1px solid var(--green);
+        border-radius: 10px;
+        padding: 16px 18px;
+        font-weight: 700;
+        color: var(--green-dark);
+        margin-bottom: 18px;
+      }
+      .success-msg.show {
+        display: block;
+      }
 
-  /* ---------- footer ---------- */
-  footer{background:var(--ink); color:rgba(251,250,248,.75); padding:56px 0 26px;}
-  .footer-top{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap;
-    padding-bottom:36px; border-bottom:1px solid rgba(251,250,248,.12);
-  }
-  .foot-badge{display:flex; align-items:center; gap:14px;}
-  .foot-badge .mark{
-    width:56px; height:56px; border-radius:50%; background:var(--tan); color:var(--green-dark);
-    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.3rem; font-family:'Montserrat',sans-serif;
-  }
-  .foot-badge .txt strong{display:block; color:var(--white); font-family:'Montserrat',sans-serif; font-size:1rem;}
-  .foot-badge .txt span{font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(251,250,248,.5);}
-  .foot-links{display:flex; gap:32px; flex-wrap:wrap;}
-  .foot-col h4{color:var(--white); font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:12px;}
-  .foot-col a{display:block; font-size:.88rem; padding:4px 0; color:rgba(251,250,248,.72);}
-  .foot-col a:hover{color:var(--tan);}
-  .foot-bottom{
-    display:flex; justify-content:space-between; padding-top:22px; font-size:.78rem; color:rgba(251,250,248,.45); flex-wrap:wrap; gap:10px;
-  }
+      /* ---------- footer ---------- */
+      footer {
+        background: var(--ink);
+        color: rgba(251, 250, 248, 0.75);
+        padding: 56px 0 26px;
+      }
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding-bottom: 36px;
+        border-bottom: 1px solid rgba(251, 250, 248, 0.12);
+      }
+      .foot-badge {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .foot-badge .mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--tan);
+        color: var(--green-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.3rem;
+        font-family: "Montserrat", sans-serif;
+      }
+      .foot-badge .txt strong {
+        display: block;
+        color: var(--white);
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+      }
+      .foot-badge .txt span {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(251, 250, 248, 0.5);
+      }
+      .foot-links {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+      }
+      .foot-col h4 {
+        color: var(--white);
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+      }
+      .foot-col a {
+        display: block;
+        font-size: 0.88rem;
+        padding: 4px 0;
+        color: rgba(251, 250, 248, 0.72);
+      }
+      .foot-col a:hover {
+        color: var(--tan);
+      }
+      .foot-bottom {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 22px;
+        font-size: 0.78rem;
+        color: rgba(251, 250, 248, 0.45);
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-  @media (max-width: 900px){
-    .about, .why, .contact{grid-template-columns:1fr;}
-    .grid-services{grid-template-columns:repeat(2,1fr);}
-    .why, .contact{padding:40px 26px; border-radius:18px;}
-    .form-row{grid-template-columns:1fr;}
-  }
-  @media (max-width: 700px){
-    nav ul, .nav-phone{display:none;}
-    .nav-toggle{display:block;}
-    section{padding:64px 0;}
-    .grid-services{grid-template-columns:1fr;}
-    .hero{padding:96px 0 70px;}
-  }
-</style>
-</head>
-<body>
-
-<header>
-  <div class="wrap nav-row">
-    <a href="#top" class="logo">
-      <span class="mark">3:16</span>
-      <span>3:16 Electrical Services<small>Serving Greater Conroe</small></span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="nav-right">
-      <a class="nav-phone" href="tel:9367881316">936-788-1316</a>
-      <a class="btn btn-dark" href="#contact">Request a Quote</a>
-    </div>
-    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<section class="hero" id="top">
-  <div class="wrap hero-inner">
-    <div class="eyebrow" style="color:var(--tan);"><span style="width:22px;height:2px;background:var(--tan);display:inline-block;"></span>Licensed &amp; Insured · Since 2010</div>
-    <h1 style="color:#fff;">Commercial and Residential Electricians in Montgomery County</h1>
-    <p class="lead">Keeping your home and business powered shouldn't be a headache. We focus on safe, up-to-code solutions that fit your schedule and your budget.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-tan">Request a Quote</a>
-      <a href="#services" class="btn btn-outline">See Our Services</a>
-    </div>
-    <div class="hero-badges">
-      <span class="b">✓ Master Electrician on Staff</span>
-      <span class="b">✓ Serving Greater Conroe Since 2010</span>
-      <span class="b">✓ You Talk Directly to Who Does the Work</span>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="about">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
-    <div>
-      <div class="eyebrow">About Us</div>
-      <h2>Local electricians your neighbors already trust</h2>
-      <p>3:16 Electrical Services is proud to serve our neighbors — from homes to local businesses, we bring safe, reliable electrical work right to your door.</p>
-      <p>We're a small, two-person operation led by a master electrician, and we like it that way. No call centers, no rotating crews — just the same familiar face handling your project from the first call to the final walkthrough.</p>
-      <div class="stat-strip">
-        <div class="stat"><strong>2</strong><span>Person Team</span></div>
-        <div class="stat"><strong>Master</strong><span>Electrician on Staff</span></div>
-        <div class="stat"><strong>1 Day</strong><span>Typical Response</span></div>
+      @media (max-width: 900px) {
+        .about,
+        .why,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+        .grid-services {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .why,
+        .contact {
+          padding: 40px 26px;
+          border-radius: 18px;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 700px) {
+        nav ul,
+        .nav-phone {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
+        section {
+          padding: 64px 0;
+        }
+        .grid-services {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding: 96px 0 70px;
+        }
+        .logo img {
+          height: 78px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav-row">
+        <a href="#top" class="logo" aria-label="3:16 Electrical Services home">
+          <img
+            src="logo.png"
+            alt="3:16 Electrical Services — Serving Greater Conroe, Since 2010"
+          />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-right">
+          <a class="nav-phone" href="tel:9367881316">936-788-1316</a>
+          <a class="btn btn-dark" href="#contact">Request a Quote</a>
+        </div>
+        <button class="nav-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-    <div class="about-card">
-      <h3>What working with us looks like</h3>
-      <ul>
-        <li>Tell us what's going on — call, email, or fill out our quick form</li>
-        <li>You schedule a time directly with our master electrician</li>
-        <li>He diagnoses the issue and quotes the fix upfront, in person</li>
-        <li>He does the work himself, start to finish, and leaves the space clean</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    </header>
 
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="services-head">
-      <div class="eyebrow" style="justify-content:center;">What We Do</div>
-      <h2>Electrical services for every home and business</h2>
-      <p>Whether it's a flickering light or a full panel upgrade, we've got the licensed experience to handle it safely.</p>
-    </div>
-    <div class="grid-services">
-      <div class="service-card">
-        <div class="ic">⚡</div>
-        <h3>Residential Wiring</h3>
-        <p>New wiring, rewiring, and repairs for houses of any age, done up to code.</p>
-      </div>
-      <div class="service-card">
-        <div class="ic">🔌</div>
-        <h3>Panel Upgrades</h3>
-        <p>Replace outdated panels and breakers so your home can safely keep up with modern power needs.</p>
-      </div>
-      <div class="service-card">
-        <div class="ic">💡</div>
-        <h3>Lighting &amp; Fixtures</h3>
-        <p>Indoor and outdoor lighting installation, from recessed cans to security lighting.</p>
-      </div>
-      <div class="service-card">
-        <div class="ic">🏢</div>
-        <h3>Commercial Electrical</h3>
-        <p>Reliable electrical work for local shops, offices, and businesses across the county.</p>
-      </div>
-      <div class="service-card">
-        <div class="ic">🛠️</div>
-        <h3>Troubleshooting &amp; Repairs</h3>
-        <p>Flickering lights, tripped breakers, or dead outlets — we find the cause and fix it.</p>
-      </div>
-      <div class="service-card">
-        <div class="ic">🚗</div>
-        <h3>EV Charger Installation</h3>
-        <p>Get a Level 2 charger installed safely and correctly at your home or business.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="why">
-      <div>
-        <div class="eyebrow">Why 3:16 Electrical?</div>
-        <h2>A master electrician who lives and works in this community</h2>
-        <p>We're a small, two-person shop — which means no subcontractors and no surprises. We treat every home and business like it's our own: honest pricing, quality work, and a friendly face every time.</p>
-        <a href="#about" class="btn btn-tan">Meet Our Team</a>
-      </div>
-      <div class="why-panel">
-        <div class="row"><span>Team size</span><span>2 people</span></div>
-        <div class="row"><span>Credentials</span><span>Master Electrician on staff</span></div>
-        <div class="row"><span>Pricing</span><span>Upfront, no surprises</span></div>
-        <div class="row"><span>Service area</span><span>Greater Conroe &amp; Montgomery County</span></div>
-        <div class="row"><span>Since</span><span>2010</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="schedule">
-  <div class="wrap">
-    <div class="eyebrow" style="justify-content:center;">Book a Visit</div>
-    <h2>Ready for reliable power? Let's talk.</h2>
-    <p>Pick a time that works for you — we'll show up on time, get the job done right, and leave your space cleaner than we found it.</p>
-    <a href="#contact" class="btn btn-dark">Book an Appointment</a>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="contact" id="contact">
-      <div>
-        <div class="eyebrow">Request a Quote</div>
-        <h2>Got a question? We're here to help.</h2>
-        <p>Tell us about your electrical project and the services you need. Share a few details, and 3:16 Electrical Services will review your request and get back to you as soon as possible.</p>
-        <div class="contact-info">
-          <a href="tel:9367881316"><span class="ic2">📞</span> 936-788-1316</a>
-          <a href="mailto:Joe@316es.com"><span class="ic2">✉️</span> Joe@316es.com</a>
+    <section class="hero" id="top">
+      <div class="wrap hero-inner">
+        <div class="eyebrow" style="color: var(--tan)">
+          <span
+            style="
+              width: 22px;
+              height: 2px;
+              background: var(--tan);
+              display: inline-block;
+            "
+          ></span
+          >Licensed &amp; Insured · Since 2010
+        </div>
+        <h1 style="color: #fff">
+          Commercial and Residential Electricians in Montgomery County
+        </h1>
+        <p class="lead">
+          Keeping your home and business powered shouldn't be a headache. We
+          focus on safe, up-to-code solutions that fit your schedule and your
+          budget.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-tan">Request a Quote</a>
+          <a href="#services" class="btn btn-outline">See Our Services</a>
+        </div>
+        <div class="hero-badges">
+          <span class="b">✓ Master Electrician on Staff</span>
+          <span class="b">✓ Serving Greater Conroe Since 2010</span>
+          <span class="b">✓ You Talk Directly to Who Does the Work</span>
         </div>
       </div>
-      <form id="quoteForm">
-        <div class="success-msg" id="successMsg">Thanks! Your request has been received — we'll be in touch within one business day.</div>
-        <div class="form-row">
-          <div class="field">
-            <label for="fname">First Name <span class="req">(required)</span></label>
-            <input type="text" id="fname" name="fname" required>
+    </section>
+
+    <section class="about" id="about">
+      <div
+        class="wrap"
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 64px;
+          align-items: center;
+        "
+      >
+        <div>
+          <div class="eyebrow">About Us</div>
+          <h2>Local electricians your neighbors already trust</h2>
+          <p>
+            3:16 Electrical Services is proud to serve our neighbors — from
+            homes to local businesses, we bring safe, reliable electrical work
+            right to your door.
+          </p>
+          <p>
+            We're a small, two-person operation led by a master electrician, and
+            we like it that way. No call centers, no rotating crews — just the
+            same familiar face handling your project from the first call to the
+            final walkthrough.
+          </p>
+          <div class="stat-strip">
+            <div class="stat"><strong>2</strong><span>Person Team</span></div>
+            <div class="stat">
+              <strong>Master</strong><span>Electrician on Staff</span>
+            </div>
+            <div class="stat">
+              <strong>1 Day</strong><span>Typical Response</span>
+            </div>
           </div>
-          <div class="field">
-            <label for="lname">Last Name <span class="req">(required)</span></label>
-            <input type="text" id="lname" name="lname" required>
+        </div>
+        <div class="about-card">
+          <h3>What working with us looks like</h3>
+          <ul>
+            <li>
+              Tell us what's going on — call, email, or fill out our quick form
+            </li>
+            <li>You schedule a time directly with our master electrician</li>
+            <li>
+              He diagnoses the issue and quotes the fix upfront, in person
+            </li>
+            <li>
+              He does the work himself, start to finish, and leaves the space
+              clean
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="services-head">
+          <div class="eyebrow" style="justify-content: center">What We Do</div>
+          <h2>Electrical services for every home and business</h2>
+          <p>
+            Whether it's a flickering light or a full panel upgrade, we've got
+            the licensed experience to handle it safely.
+          </p>
+        </div>
+        <div class="grid-services">
+          <div class="service-card">
+            <div class="ic">⚡</div>
+            <h3>Residential Wiring</h3>
+            <p>
+              New wiring, rewiring, and repairs for houses of any age, done up
+              to code.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="ic">🔌</div>
+            <h3>Panel Upgrades</h3>
+            <p>
+              Replace outdated panels and breakers so your home can safely keep
+              up with modern power needs.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="ic">💡</div>
+            <h3>Lighting &amp; Fixtures</h3>
+            <p>
+              Indoor and outdoor lighting installation, from recessed cans to
+              security lighting.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="ic">🏢</div>
+            <h3>Commercial Electrical</h3>
+            <p>
+              Reliable electrical work for local shops, offices, and businesses
+              across the county.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="ic">🛠️</div>
+            <h3>Troubleshooting &amp; Repairs</h3>
+            <p>
+              Flickering lights, tripped breakers, or dead outlets — we find the
+              cause and fix it.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="ic">🚗</div>
+            <h3>EV Charger Installation</h3>
+            <p>
+              Get a Level 2 charger installed safely and correctly at your home
+              or business.
+            </p>
           </div>
         </div>
-        <div class="field">
-          <label for="email">Email <span class="req">(required)</span></label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone <span class="req">(required)</span></label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="field">
-          <label for="pdate">Preferred Starting Date</label>
-          <input type="date" id="pdate" name="pdate">
-        </div>
-        <div class="field">
-          <label for="message">Message <span class="req">(required)</span></label>
-          <textarea id="message" name="message" placeholder="Tell us about the work, location, and any timing requirements." required></textarea>
-        </div>
-        <div class="field">
-          <label for="source">How Did You Hear About Us?</label>
-          <input type="text" id="source" name="source">
-        </div>
-        <button type="submit" class="btn btn-dark" style="width:100%;">Request a Quote</button>
-        <p class="form-note" style="margin-top:12px;">This form is a front-end placeholder — connect it to your Squarespace form action or email service to receive real submissions.</p>
-      </form>
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="foot-badge">
-        <div class="mark">3:16</div>
-        <div class="txt">
-          <strong>3:16 Electrical Services</strong>
-          <span>Serving Greater Conroe · Since 2010</span>
+    <section>
+      <div class="wrap">
+        <div class="why">
+          <div>
+            <div class="eyebrow">Why 3:16 Electrical?</div>
+            <h2>A master electrician who lives and works in this community</h2>
+            <p>
+              We're a small, two-person shop — which means no subcontractors and
+              no surprises. We treat every home and business like it's our own:
+              honest pricing, quality work, and a friendly face every time.
+            </p>
+            <a href="#about" class="btn btn-tan">Meet Our Team</a>
+          </div>
+          <div class="why-panel">
+            <div class="row"><span>Team size</span><span>2 people</span></div>
+            <div class="row">
+              <span>Credentials</span><span>Master Electrician on staff</span>
+            </div>
+            <div class="row">
+              <span>Pricing</span><span>Upfront, no surprises</span>
+            </div>
+            <div class="row">
+              <span>Service area</span
+              ><span>Greater Conroe &amp; Montgomery County</span>
+            </div>
+            <div class="row"><span>Since</span><span>2010</span></div>
+          </div>
         </div>
       </div>
-      <div class="foot-links">
-        <div class="foot-col">
-          <h4>Site</h4>
-          <a href="#top">Home</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact Us</a>
-        </div>
-        <div class="foot-col">
-          <h4>Get in Touch</h4>
-          <a href="tel:9367881316">936-788-1316</a>
-          <a href="mailto:Joe@316es.com">Joe@316es.com</a>
+    </section>
+
+    <section class="schedule">
+      <div class="wrap">
+        <div class="eyebrow" style="justify-content: center">Book a Visit</div>
+        <h2>Ready for reliable power? Let's talk.</h2>
+        <p>
+          Pick a time that works for you — we'll show up on time, get the job
+          done right, and leave your space cleaner than we found it.
+        </p>
+        <a href="#contact" class="btn btn-dark">Book an Appointment</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="contact" id="contact">
+          <div>
+            <div class="eyebrow">Request a Quote</div>
+            <h2>Got a question? We're here to help.</h2>
+            <p>
+              Tell us about your electrical project and the services you need.
+              Share a few details, and 3:16 Electrical Services will review your
+              request and get back to you as soon as possible.
+            </p>
+            <div class="contact-info">
+              <a href="tel:9367881316"
+                ><span class="ic2">📞</span> 936-788-1316</a
+              >
+              <a href="mailto:Joe@316es.com"
+                ><span class="ic2">✉️</span> Joe@316es.com</a
+              >
+            </div>
+          </div>
+          <form
+            id="quoteForm"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <div class="success-msg" id="successMsg">
+              Thanks! Your request has been received — we'll be in touch within
+              one business day.
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="fname"
+                  >First Name <span class="req">(required)</span></label
+                >
+                <input type="text" id="fname" name="fname" required />
+              </div>
+              <div class="field">
+                <label for="lname"
+                  >Last Name <span class="req">(required)</span></label
+                >
+                <input type="text" id="lname" name="lname" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email"
+                >Email <span class="req">(required)</span></label
+              >
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="field">
+              <label for="phone"
+                >Phone <span class="req">(required)</span></label
+              >
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div class="field">
+              <label for="pdate">Preferred Starting Date</label>
+              <input type="date" id="pdate" name="pdate" />
+            </div>
+            <div class="field">
+              <label for="message"
+                >Message <span class="req">(required)</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about the work, location, and any timing requirements."
+                required
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="source">How Did You Hear About Us?</label>
+              <input type="text" id="source" name="source" />
+            </div>
+            <button type="submit" class="btn btn-dark" style="width: 100%">
+              Request a Quote
+            </button>
+            <p class="form-note" style="margin-top: 12px">
+              Form is wired to Formspree — swap YOUR_FORM_ID in the code for
+              your real Formspree form ID before going live.
+            </p>
+          </form>
         </div>
       </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 3:16 Electrical Services. All rights reserved.</span>
-      <span>Licensed &amp; Insured · Montgomery County, TX</span>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<script>
-  // mobile nav toggle
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('nav ul');
-  const navPhone = document.querySelector('.nav-phone');
-  toggle.addEventListener('click', () => {
-    const open = navList.style.display === 'flex';
-    navList.style.display = open ? 'none' : 'flex';
-    navList.style.flexDirection = 'column';
-    navList.style.gap = '14px';
-    navPhone.style.display = open ? 'none' : 'block';
-  });
+    <footer>
+      <div class="wrap">
+        <div class="footer-top">
+          <div class="foot-badge">
+            <div class="mark">3:16</div>
+            <div class="txt">
+              <strong class="script" style="font-size: 1.6rem"
+                >3:16 Electrical Services</strong
+              >
+              <span>Serving Greater Conroe · Since 2010</span>
+            </div>
+          </div>
+          <div class="foot-links">
+            <div class="foot-col">
+              <h4>Site</h4>
+              <a href="#top">Home</a>
+              <a href="#services">Services</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact Us</a>
+            </div>
+            <div class="foot-col">
+              <h4>Get in Touch</h4>
+              <a href="tel:9367881316">936-788-1316</a>
+              <a href="mailto:Joe@316es.com">Joe@316es.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <span>© 2026 3:16 Electrical Services. All rights reserved.</span>
+          <span>Licensed &amp; Insured · Montgomery County, TX</span>
+        </div>
+      </div>
+    </footer>
 
-  // demo form success state (no real backend)
-  const form = document.getElementById('quoteForm');
-  const successMsg = document.getElementById('successMsg');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    successMsg.classList.add('show');
-    form.reset();
-    successMsg.scrollIntoView({behavior:'smooth', block:'nearest'});
-  });
-</script>
+    <script>
+      // mobile nav toggle
+      const toggle = document.querySelector(".nav-toggle");
+      const navList = document.querySelector("nav ul");
+      const navPhone = document.querySelector(".nav-phone");
+      toggle.addEventListener("click", () => {
+        const open = navList.style.display === "flex";
+        navList.style.display = open ? "none" : "flex";
+        navList.style.flexDirection = "column";
+        navList.style.gap = "14px";
+        navPhone.style.display = open ? "none" : "block";
+      });
 
-</body>
+      // real form submission to Formspree
+      const form = document.getElementById("quoteForm");
+      const successMsg = document.getElementById("successMsg");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" },
+        })
+          .then((response) => {
+            if (response.ok) {
+              successMsg.textContent =
+                "Thanks! Your request has been received — we'll be in touch within one business day.";
+              successMsg.style.background = "var(--green-tint)";
+              successMsg.classList.add("show");
+              form.reset();
+            } else {
+              successMsg.textContent =
+                "Something went wrong sending your request. Please call or email us directly.";
+              successMsg.style.background = "#f4d8d0";
+              successMsg.classList.add("show");
+            }
+            successMsg.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          })
+          .catch(() => {
+            successMsg.textContent =
+              "Something went wrong sending your request. Please call or email us directly.";
+            successMsg.style.background = "#f4d8d0";
+            successMsg.classList.add("show");
+            successMsg.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          });
+      });
+    </script>
+  </body>
 </html>
